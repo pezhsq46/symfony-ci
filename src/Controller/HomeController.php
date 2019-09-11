@@ -14,6 +14,7 @@ class HomeController extends AbstractController
     public function index(ProductRepository $productRepository)
     {
 	$products = $productRepository->findAllByPrice();
+	die("test");
         return $this->render('home/index.html.twig', [
 	    'name' => 'PUG Sondrio',
             'products' => $products,
