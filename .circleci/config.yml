@@ -30,7 +30,7 @@ jobs:
 
     - run: sudo apt-get install -y mysql-client
     - run: sudo -E docker-php-ext-install pdo_mysql
-    - run: mysql -h 127.0.0.1 -u root -e "CREATE DATABASE demo-ci;"
+    - run: mysql -h 127.0.0.1 -u root -e "CREATE DATABASE demo"
     - run: mysql -h 127.0.0.1 -u root -e "CREATE USER demo IDENTIFIED BY 'root';"
     - run: mysql -h 127.0.0.1 -u root -e "GRANT ALL ON root.* TO root;"
    
