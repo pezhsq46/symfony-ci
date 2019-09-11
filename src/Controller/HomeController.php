@@ -9,11 +9,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/prova", name="home")
      */
     public function index(ProductRepository $productRepository)
     {
 	$products = $productRepository->findAllByPrice();
+	die("test");
         return $this->render('home/index.html.twig', [
 	    'name' => 'PUG Sondrio',
             'products' => $products,
