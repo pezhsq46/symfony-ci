@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
@@ -11,12 +12,9 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index(ProductRepository $productRepository)
+    public function index()
     {
-	$products = $productRepository->findAllByPrice();
-        return $this->render('home/index.html.twig', [
-	    'name' => 'PUG Sondrio',
-            'products' => $products,
-        ]);
+        return new Response("success", 200);
     }
+
 }

@@ -13,4 +13,8 @@ class HomeControllerTest extends WebTestCase
 
         $this->assertTrue($client->getResponse()->isSuccessful());
     }
+
+
+
+
 }
