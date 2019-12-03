@@ -17,4 +17,12 @@ class HomeController extends AbstractController
         return new Response("success", 200);
     }
 
+    /**
+     * @Route("/error", name="error")
+     */
+    public function error()
+    {
+        return new Response("failure", 500);
+    }
+
 }
