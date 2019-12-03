@@ -19,7 +19,7 @@ class HomeControllerTest extends WebTestCase
         $client = static::createClient();
         $client->request('GET', '/error');
 
-        $this->assertTrue($client->getResponse()->isSuccessful());
+        $this->assertTrue($client->getResponse()->isServerError());
     }
 
 
